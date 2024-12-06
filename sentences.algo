@@ -1,0 +1,12 @@
+ALGORITHM sentences;
+
+VAR
+    count_1=0, count_2,count_3, Str_1 vowels=[a,e,i,o,u]
+BEGIN
+    for x in str:
+        count_1+=1
+        for y in x:
+            count_2+=1
+            if y in vowles:
+                count_3
+END
