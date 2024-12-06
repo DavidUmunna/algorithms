@@ -1,0 +1,17 @@
+ALGORITHM selection_sort
+
+VAR
+    lst,num_11,num_2,min_idx
+
+BEGIN
+    n=len(lst)
+    for num_1 in range(n-1):
+        min_idx=i
+        for num_2 in range(i+1,n):
+            if lst[num2]<lst[min_idx]:
+                min_idx=num_2
+        END
+        lst[num_1],lst[min_idx]=lst[min_idx],lst[num_1]
+    END
+    print lst
+END

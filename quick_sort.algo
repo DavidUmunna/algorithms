@@ -1,0 +1,51 @@
+PROCEDURE quick_sort(VAR arr : ARRAY_OF INTEGER)
+
+VAR
+
+  // Create an auxiliary stack
+
+  stack : STACK;
+
+  p : INTEGER;
+
+BEGIN
+
+   // pushing initial values of l and h to stack
+
+   stack.push(l);
+
+   stack.push(h);
+
+   // keep popping from the stack while is not empty
+
+   WHILE (NOT stack.isEmpty()) DO
+
+       // pop h and l
+
+       h := stack.pop();
+
+       l := stack.pop();
+
+       // set pivot element at its correct position
+
+       // in a sorted array
+
+       p := partition(arr,l,h);
+
+       // if there are elements on the right side of the pivot,
+
+       // then push right side to stack
+
+       IF (p+1 < h) THEN
+
+           stack.push(p+1);
+
+           stack.push(h);
+
+       END_IF
+
+   END_WHILE
+
+
+
+END
