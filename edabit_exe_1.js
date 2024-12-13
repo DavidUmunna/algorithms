@@ -1,4 +1,4 @@
-class Bitwise{
+/*class Bitwise{
     constructor(num1,num2){
         this.bin_1=num1
         this.bin_2=num2
@@ -23,7 +23,7 @@ class Bitwise{
         return console.log(bin_xor)
     }
 
-}
+}*/
 
 function minMax(arr) {
     console.log(arr)
@@ -74,6 +74,9 @@ const obj= new Bitwise(7,12)
 //obj.bitwise_XOR()
 
 
+console.log(symmetrical(23))
+
+
 function isSpecialArray(arr){
     let i=0
     let j=1
@@ -92,13 +95,3 @@ function isSpecialArray(arr){
             return true
         }
 }
-
-
-//arr=[2, 7, 9, 1, 6, 1, 6, 3]
-//console.log(isSpecialArray(arr))
-
-function counttrue(arr){
-    
-
-}
-
