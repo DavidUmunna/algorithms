@@ -74,4 +74,31 @@ const obj= new Bitwise(7,12)
 //obj.bitwise_XOR()
 
 
-console.log(symmetrical(23))
+function isSpecialArray(arr){
+    let i=0
+    let j=1
+    var count=0
+    while (i<arr.length &&j<arr.length){
+        if ((arr[i]%2==0 ) && (arr[j]%2!=0)){
+            count+=2
+            i+=2
+            j+=2
+        }
+        else{
+            return false
+        }
+    }
+    if (count==arr.length){
+            return true
+        }
+}
+
+
+//arr=[2, 7, 9, 1, 6, 1, 6, 3]
+//console.log(isSpecialArray(arr))
+
+function counttrue(arr){
+    
+
+}
+
