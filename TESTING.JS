@@ -96,4 +96,67 @@ function getCount(str) {
   return result.length;
 }
 
-console.log(getCount('abracadabra'))
+//console.log(getCount('abracadabra'))
+
+
+/*const person={
+  name:'james',
+  email:'james.simon@gmail.com',
+  login (){
+    console.log(this.email+ " has logged in")
+  },
+  logout(){
+      console.log(this.email+ " has logged out")
+  }
+}*/
+
+
+
+//classes
+class User{
+  constructor(name,email){
+    this.name=name
+    this.email=email
+    this.score=0
+  }
+
+  login() {
+    console.log(this.name+' just logged in')
+    return this
+  }
+  return_email(){
+    console.log(this.email + " is his email")
+    return this
+  }
+  logount() {
+    console.log(this.name+' just logged out')
+    return this
+    
+  }
+  updatethis(){
+    this.score++;
+    console.log(this.email, 'score is now', this.score)
+    return this
+  }
+
+}
+class admin extends User{
+  /*constructor(name,email){
+    super(name)
+  }*/
+  delete_user(){
+    users=users.filter()
+  }
+}
+
+let user1=new User('ryu','ryu.simeon@gmail.com');
+let user2=new User('john','john.april@gmail.com');
+let user3=new User('james','james.april@gmail.com');
+
+console.log(user1.login())
+console.log(user2.logount())
+user3.return_email()
+
+
+user2.updatethis().updatethis().logount()
+
