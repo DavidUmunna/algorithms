@@ -144,19 +144,128 @@ class admin extends User{
   /*constructor(name,email){
     super(name)
   }*/
-  delete_user(){
-    users=users.filter()
+  delete_user(user){
+    users=users.filter(u=>{
+      return u.email!=user.email;
+    })
   }
 }
 
 let user1=new User('ryu','ryu.simeon@gmail.com');
 let user2=new User('john','john.april@gmail.com');
 let user3=new User('james','james.april@gmail.com');
+let user4=new admin('jane','jane.caroline@gmail.com');
+var Admin=new admin('shaun@ninja.com','shaun')
 
+
+
+var users=[user1,user2,user3,user4]
+user3.login().updatethis().updatethis().logount()
 console.log(user1.login())
 console.log(user2.logount())
-user3.return_email()
+console.log(user2.return_email())
+Admin.delete_user(user1)
+console.log(users)
 
 
-user2.updatethis().updatethis().logount()
 
+//user2.updatethis().updatethis().logount()
+
+function repeatStr (n, s) {
+  
+  return s.repeat(n);
+}
+//console.log(repeatStr(6,'I'))
+
+//to find sum of odd numbers
+const odd_num=(n)=>n%2!=0;
+function generateNumbers(start, end,condition) {
+  return Array.from({ length: end - start + 1 }, (_, i) => start + i).filter(condition);
+}
+//console.log(generateNumbers(1, 1000, odd_num))
+const rowSumOddNumbers= (n)=> generateNumbers(1, 1000000, odd_num).slice(((n*(n-1))/2),(n+(((n*(n-1)))/2))).reduce((total,current)=>total+current,0) 
+//console.log(rowSumOddNumbers(42))
+
+
+lst=[1,2,3,4,5]
+//console.log(lst[-1])
+
+
+
+const increment=(y)=>{return y==0? 1:  y %2==1? (2*increment((y/2))): y+1 }
+
+//console.log(increment(5))
+
+
+const letters = new Set([1,2,3,4]);
+
+const napsack=(arr,t)=>{
+  total=0
+  let set=[]
+  for (let i=arr.length-1;i!=0;i--){
+    
+    if (total<=t){
+      if (total+arr[i]>t){
+        continue
+      }
+      total+=arr[i]
+      set.push(arr[i])
+    }
+  }
+  return (total,set)
+}
+
+//console.log(napsack([1,2,5,9,10],19))
+
+
+//get first istem of set
+/*const set = new Set();
+set.add(2);
+set.add(3);
+
+// return the first item of Set 
+function getFirstItemOfSet(set) {
+  for(let item of set) {
+    if(item) {
+       return item;
+    }   
+  }
+  return undefined;
+}
+
+const first = getFirstItemOfSet(set);
+console.log('first item =', first);*/
+
+
+const data=new Set(['1', '2', '3']);
+
+const first = [...data][0];
+
+//console.log(first)
+//returns productnof yz
+function multiply(y,z){
+  const c=2
+  if (z==0){
+    return 0
+  }else{
+    return (multiply(c*y,(z/c))+y*(z%c))
+  }
+}
+
+//console.log(multiply(5,8))
+function divide(num,div){
+  let count=0
+  let times=0
+  for (let i=0;i<num;i++){
+        times+=1
+        if (times==div){
+          count+=1
+          times=0
+        } 
+  }
+  return count
+}
+//console.log(divide(6,2))
+
+
+var userone
